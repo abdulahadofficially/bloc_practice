@@ -1,0 +1,38 @@
+................. what is Equtable package ....................
+
+Equtable package is used for check two instance/object is equal or not 
+in case when the values are same. 
+By default, in flutter two instance/object are not equal
+
+
+....................... What is Bloc Events & States Theory ..................
+
+
+Events ..........> Bloc ..............> state
+
+Bloc is state management for managing state management in app like getx
+ two most important concept in Bloc
+ 1. Events
+ 2. States
+ for testing and scale-ability bloc is best and bloc work on solid principle
+
+ .............. 
+
+
+
+ what is Events?
+
+ Event basically, We have some classes and in classes we have events
+ for example
+ if we talk about increament and decrement example so we have 2 button and a single text/variable 
+ which increament and decrement when we clicks on buttons.
+
+so in this example we have 2 events
+1. one is increament
+2. second is decrement
+
+we give event to bloc and then bloc do some processing and after processing our state chanage
+
+
+
+

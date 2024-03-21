@@ -1,3 +1,0 @@
-Equtable package is used for check two instance/object is equal or not 
-in case when the values are same. 
-By default, in flutter two instance/object are not equal
