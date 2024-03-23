@@ -1,11 +1,12 @@
+// ignore_for_file: file_names
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:project/bloc/counterbloc/counter_bloc.dart';
 import 'package:project/bloc/counterbloc/counter_event.dart';
 import 'package:project/bloc/counterbloc/counter_state.dart';
 
-class Homescreen extends StatelessWidget {
-  const Homescreen({super.key});
+class CounterScreen extends StatelessWidget {
+  const CounterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

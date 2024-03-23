@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:project/bloc/counterbloc/counter_bloc.dart';
-import 'package:project/view/homescreen.dart';
+import 'package:project/bloc/internetbloc/internetbloc.dart';
+import 'package:project/view/Counterscreen.dart';
+import 'package:project/view/internet_connectivity_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,14 +12,20 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => CounterBloc(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => CounterBloc(),
+        ),
+        BlocProvider(
+          create: (context) => InternetBloc(),
+        )
+      ],
       child: const MaterialApp(
         title: 'Bloc Statemanagement Practice',
-        home: Homescreen(),
+        home: InternetConnectivityScreen(),
       ),
     );
   }
