@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:project/cubit/cubit/internetcubit_cubit.dart';
-import 'package:project/view/Counterscreen.dart';
-import 'package:project/view/internet_Connectivity_through_cubit.dart';
-import 'package:project/view/internet_connectivity_screen.dart';
+import 'package:project/view/Homeview/bloc/signin_bloc.dart';
+
+import 'view/Homeview/homeview.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,21 +13,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        // BlocProvider(
-        //   create: (context) => CounterBloc(),
-        // ),
-        // BlocProvider(
-        //   create: (context) => InternetBloc(),
-        // ),
-        BlocProvider(
-          create: (context) => InternetCubit(),
-        ),
-      ],
-      child: const MaterialApp(
+    return BlocProvider(
+      create: (context) => SiginBloc(),
+      child: MaterialApp(
         title: 'Bloc Statemanagement Practice',
-        home: InternetConnectivityCubit(),
+        home: HomeScreen(),
       ),
     );
   }
